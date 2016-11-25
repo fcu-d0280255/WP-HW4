@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#food").hide();
+    $("#b1").click(function(){        
+    	$("#food").toggle();
+    });
+    $("#b2").click(function(){
+	$("#food").hide();        
+    	$("#food").slideDown(5000);
+	
+    });
+    $("#b3").click(function(){
+        $("#food").hide();        
+    	$("#food").fadeIn(5000);
+    });
+    $("#b4").click(function(){
+        $("#food").stop();
+    });
+    $("#b5").click(function(){
+        $("#food").animate({
+            height: '+=50px',
+            width: '+=50px'
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<img src = "food.jpg" id="food" style="width:270px;height:200px"><br><br>
+<button id = "b1"> toggle </button>
+<button id = "b2"> slide </button>
+<button id = "b3"> fade </button>
+<button id = "b4"> stop </button>
+<button id = "b5"> bigger </button>
+</body>
+</html>
